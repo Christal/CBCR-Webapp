@@ -18,19 +18,11 @@
 		<img alt="Navigation Bar" src="images/nav.png" />
 		
 	</div>
-	
-	<!-- CONTAINER: Holds the sidebar and main area -->
+	<!-- CONTAINER: -->
 	<div id="container">
-		<!-- SIDEBAR: -->
-		<div id="sidebar">
-			<h1>Newsletter</h1>
+		<div>
 			
-			<p>Contact the editor, Karen Beven, at cbcrnewsletter@yahoo.com to subscribe. </p>
-		</div
-		<!-- MAIN: -->
-		<div id="main">
-			<p>Here is a copy of the first page of the most recent issue to entice you to subscribe. You need to subscribe to read the rest of the newsletter. </p>
-		</div>			
+		</div>
 		<!-- FOOTER: -->
 		<div id="footer">
 			<p>CBCR @2014</p>

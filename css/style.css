@@ -1,0 +1,64 @@
+body{
+	margin: auto;
+	background-color: #e0bb75;
+	font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+	color: #5b3c1f;
+}
+h1{
+	color: #aa1b25;
+}
+h2{
+	color: #2e3f71;
+}
+#header{
+	margin: auto;
+	width: 80%;
+	padding: 10px 20px 0px 20px;
+	background-color: #ffffff;
+}
+#header img{
+	width: 100%;
+}
+#nav{
+	width: 80%;
+	margin: auto;
+	padding: 0px 20px;
+	background-color: #ffffff;
+}
+#nav img{
+	width: 100%;
+}
+#container{
+	width: 80%;
+	height:inherit;
+	margin: auto;
+	padding: 10px 20px;
+	background-color: #ffffff;
+	overflow:hidden;
+}
+#sidebar{
+	width: 20%;
+	float: left;
+	padding: 0px 10px;
+	background-color: #ffffff;
+	overflow: hidden;
+}
+#sidebar a{
+	display: block;
+}
+#main{
+	width: 70%;
+	float: left;
+	padding: 0px 10px;
+	background-color: #ffffff;
+	border-left: 1px solid #211100;
+	overflow: hidden;
+}
+#footer{
+	width: 100%;
+	float: left;
+	margin: auto;
+	padding: 0px 10px;
+	background-color: #ffffff;
+}
+
