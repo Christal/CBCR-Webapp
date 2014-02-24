@@ -41,7 +41,8 @@
 		<?php echo $username . ' (' .$useremail . ')';?>
 		</h1>
 		
-		<form action='CheckPassword.php' method='post'><input type='submit' name='checkpassword' value='Check Password/PIN'/></form>
+		<form action='CheckPassword.php' method='post'><input type='submit' name='checkpassword' value='Check Password'/></form>
+		<form action='Logout.php' method='post'><input type="Submit" value="Logout"></form>
 		
 		<!-- FOOTER: -->
 		<div id="footer">
