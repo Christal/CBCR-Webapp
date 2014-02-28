@@ -64,12 +64,20 @@ h4{
 	-moz-column-count:2; /* Firefox */
 -webkit-column-count:2;
 column-count: 2;
--moz-column-gap:20px; /* Firefox */
--webkit-column-gap:20px;
-	column-gap: 20px;
+-moz-column-gap:30px; /* Firefox */
+-webkit-column-gap:30px;
+	column-gap: 30px;
 	column-rule-width: 1px;
   column-rule-style: solid;
   column-rule-color: #000;
+  
+  -moz-column-rule-width: 1px;
+  -moz-column-rule-style: solid;
+  -moz-column-rule-color: #000;
+  
+  -webkit-column-rule-width: 1px;
+  -webkit-column-rule-style: solid;
+  -webkit-column-rule-color: #000;
 }
 #main{
 	width: 70%;
