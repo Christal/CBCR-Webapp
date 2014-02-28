@@ -3,12 +3,26 @@ body{
 	background-color: #e0bb75;
 	font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
 	color: #5b3c1f;
+	text-align: justify;
 }
 h1{
 	color: #aa1b25;
 }
 h2{
 	color: #2e3f71;
+}
+h3{
+	font-family: "Amatic SC";
+	font-size: 200%;
+	color: #2e3f71;
+	margin: 0;
+	margin-top: 0;
+}
+h4{
+	font-family: "Amatic SC";
+	font-size: 250%;
+	color:#2e3f71;
+	margin: 5 px;
 }
 #header{
 	margin: auto;
@@ -45,6 +59,17 @@ h2{
 }
 #sidebar a{
 	display: block;
+}
+.cols2 {
+	-moz-column-count:2; /* Firefox */
+-webkit-column-count:2;
+column-count: 2;
+-moz-column-gap:20px; /* Firefox */
+-webkit-column-gap:20px;
+	column-gap: 20px;
+	column-rule-width: 1px;
+  column-rule-style: solid;
+  column-rule-color: #000;
 }
 #main{
 	width: 70%;
