@@ -56,6 +56,7 @@ h4{
 	padding: 0px 10px;
 	background-color: #ffffff;
 	overflow: hidden;
+
 }
 #sidebar a{
 	display: block;
@@ -82,7 +83,7 @@ column-count: 2;
 #main{
 	width: 70%;
 	float: left;
-	padding: 0px 10px;
+	padding-left: 10px;
 	background-color: #ffffff;
 	border-left: 1px solid #211100;
 	overflow: hidden;
