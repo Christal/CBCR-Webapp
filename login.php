@@ -30,7 +30,6 @@
 				<p><input type="submit" value="Login"></p>
 				<p id="status"></p>
 			</form>
-			<form action="Register.html" method="post"><input type="submit" value="Registration Page"></form>
 			
 		</div>
 	
