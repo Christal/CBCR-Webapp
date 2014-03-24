@@ -26,11 +26,10 @@
 			
 			<form action="CheckLogin.php" method="post">
 				<p> Email: <input type="email" name="userEmail" size="25" /> </p>
-				<p> Password: <input type="password" name="userPIN" size="25" /> </p>
+				<p> Password: <input type="password" name="userPassword" size="25" /> </p>
 				<p><input type="submit" value="Login"></p>
 				<p id="status"></p>
 			</form>
-			<form action="Register.html" method="post"><input type="submit" value="Registration Page"></form>
 			
 		</div>
 	

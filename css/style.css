@@ -13,7 +13,7 @@ h2{
 }
 h3{
 	font-family: "Amatic SC";
-	font-size: 200%;
+	font-size: 150%;
 	color: #2e3f71;
 	margin: 0;
 	margin-top: 0;
@@ -50,40 +50,54 @@ h4{
 	background-color: #ffffff;
 	overflow:hidden;
 }
+#container img{
+	max-height: 70%;
+	max-width: 70%;
+}
 #sidebar{
 	width: 20%;
 	float: left;
 	padding: 0px 10px;
 	background-color: #ffffff;
 	overflow: hidden;
-
 }
 #sidebar a{
 	display: block;
 }
+#nameimage{
+	position: relative;
+	width: 100%;
+}
+#nameimage h3{
+	position: absolute;
+	top: 10%;
+	left: 15%;
+	color: #000000;
+	font-size: 150%;
+}
 .cols2 {
 	-moz-column-count:2; /* Firefox */
--webkit-column-count:2;
-column-count: 2;
--moz-column-gap:30px; /* Firefox */
--webkit-column-gap:30px;
+	-webkit-column-count:2;
+	column-count: 2;
+	-moz-column-gap:30px; /* Firefox */
+	-webkit-column-gap:30px;
 	column-gap: 30px;
 	column-rule-width: 1px;
-  column-rule-style: solid;
-  column-rule-color: #000;
+	column-rule-style: solid;
+	column-rule-color: #000;
   
-  -moz-column-rule-width: 1px;
-  -moz-column-rule-style: solid;
-  -moz-column-rule-color: #000;
-  
-  -webkit-column-rule-width: 1px;
-  -webkit-column-rule-style: solid;
-  -webkit-column-rule-color: #000;
+	-moz-column-rule-width: 1px;
+	-moz-column-rule-style: solid;
+	-moz-column-rule-color: #000;
+	 
+	-webkit-column-rule-width: 1px;
+	-webkit-column-rule-style: solid;
+	-webkit-column-rule-color: #000;
 }
 #main{
 	width: 70%;
 	float: left;
-	padding-left: 10px;
+	padding: 0px 10px;
 	background-color: #ffffff;
 	border-left: 1px solid #211100;
 	overflow: hidden;
