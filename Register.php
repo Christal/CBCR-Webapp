@@ -5,17 +5,17 @@ $username="root";
 $password="cs4912";
 $database="cs4912";
 
-$tbl_name="user";
+$tbl_name="users";
 
 mysql_connect($host,$username,$password);
 @mysql_select_db($database) or die( "Unable to select database");
 
 echo "CALLING ME ";
 
-$registerName=$_POST['Name'];
-$registerEmail=$_POST['Email'];
-$registerPassword=$_POST['Password'];
-$registerConfirmPassword=$_POST['ConfirmPassword'];
+$registerName=$_POST['name'];
+$registerEmail=$_POST['email'];
+$registerPassword=$_POST['password'];
+$registerConfirmPassword=$_POST['confirm_password'];
 
 // To protect MySQL injection
 $registerName = stripslashes($registerName);
@@ -31,14 +31,14 @@ $query = "INSERT INTO $tbl_name VALUES('$registerEmail','$registerPassword','$re
 
 $result = mysql_query($query);
 
-$usercheck = $_POST['Email'];
-$check = mysql_query("SELECT Email FROM user WHERE Email = '$usercheck'") 
+$usercheck = $_POST['email'];
+$check = mysql_query("SELECT email FROM users WHERE email = '$usercheck'") 
 or die(mysql_error());
 $check2 = mysql_num_rows($check);
 if ($check2 != 0) {
- 		die('Sorry, the email '.$_POST['Email'].' is already in use.');
+ 		die('Sorry, the email '.$_POST['email'].' is already in use.');
 }
-elseif($_POST['Password'] != $_POST['ConfirmPassword']){
+elseif($_POST['password'] != $_POST['confirm_password']){
 	echo "Passwords do not match";
 }
 elseif(!$result){
