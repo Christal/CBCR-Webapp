@@ -47,29 +47,30 @@
 
 	<div id="container">
 		
-		<h2>Contact: <?php echo $dogPosterName. ' (' .$email . ')';?></h2>
+		<div class ='cols2'>
 		<img src="<?php echo $URL; ?>"/><br>
-		Name: <?php echo $dog['name'];?><br>
-		Age: <?php echo $dog['age'];?><br>
-		Sex: <?php echo $dog['sex'];?><br>
-		Location: <?php echo $dog['location'];?><br>
-		Weight: <?php echo $dog['weight'];?><br>
-		Coat Color: <?php echo $dog['coat_color'];?><br>
-		Coat Type: <?php echo $dog['coat_type'];?><br>
-		Activity Level: <?php echo $dog['activity_level'];?><br>
-		Description: <?php echo $description?><br>
+		<h4>Name <?php echo $dog['name'];?></h4>
+		<h3>Age</h3> <?php echo $dog['age'];?>
+		<h3>Sex</h3> <?php echo $dog['sex'];?>
+		<h3>Location</h3> <?php echo $dog['location'];?>
+		<h3>Weight</h3> <?php echo $dog['weight'];?>
+		<h3>Coat Color</h3> <?php echo $dog['coat_color'];?>
+		<h3>Coat Type</h3> <?php echo $dog['coat_type'];?>
+		<h3>Activity Level</h3> <?php echo $dog['activity_level'];?>
+		<h3>Description</h3> <p><?php echo $description?></p>
 		<br>
-		Status: <?php echo $dog['status'];?><br>
+		<h3>Status</h3> <?php echo $dog['status'];?>
 		<br>
-		House Trained: <?php echo $dog['house_trained'];?><br>
-		Spayed/Neutered: <?php echo $dog['spayed_neutered'];?><br>
-		Current of Vaccinations: <?php echo $dog['current_vaccinations'];?><br>
-		Home Preferences: <?php echo $dog['home_preference'];?><br>
-		
+		<h3>House Trained</h3> <?php echo $dog['house_trained'];?>
+		<h3>Spayed/Neutered</h3> <?php echo $dog['spayed_neutered'];?>
+		<h3>Current of Vaccinations</h3> <?php echo $dog['current_vaccinations'];?>
+		<h3>Home Preferences</h3> <?php echo $dog['home_preference'];?>
+		<br/>
+		<h3>Contact</h3> <p><?php echo $dogPosterName. ' (' .$email . ')';?></p>
 		<form action='adoptionapplication.php' method='post'>
 			<input type="submit" value="Apply to Adopt Me"/></td>
 		</form>
-			
+		</div>	
 		<form name = "input" action = "home.php" method = "post">
 			<input type="submit" value="Back to Home" name="backtohome"/>
 		</form>

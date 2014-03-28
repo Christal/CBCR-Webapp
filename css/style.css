@@ -102,6 +102,12 @@ h4{
 	border-left: 1px solid #211100;
 	overflow: hidden;
 }
+#adoptionDiv{
+	width: 100%;
+	padding: 0px 10px;
+	background-color: #ffffff;
+	overflow: hidden;
+}
 #footer{
 	width: 100%;
 	float: left;

@@ -32,30 +32,61 @@
 	</div>
 
 	<div id="container">
-			
-		<h2>Available Dogs</h2>
+		<div id="adoptionDiv">	
+		<center><h4>Available Dogs</h4></center>
 		<?php $sql = "SELECT * FROM dogs";
 			$result = mysql_query($sql);
 			while ($rows = mysql_fetch_array($result)) {
 		?>
 		<form action='dogprofile.php' method='post'>
+			<div class = 'cols2'>
+			<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
+					<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
+					<br/>
+			
+			<h4><center>Name<?php echo $rows['name']; ?>
+				<input type="hidden" name="name" value="<?php echo $rows['name'];?>"></center></h4>
+				
+			<h3>Description</h3><p><?php echo $rows['description']; ?>
+				<input type="hidden" name="description" value="<?php echo $rows['description'];?>"></p>
+				
+			<h3>Contact</h3><p><?php echo $rows['email']; ?>
+				<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
+			<input type="submit" value="Adopt Me!"/>	
+			</div>
+			<center>
 			<div id="nameimage">
 				<img src="images/redCollar.png" alt="Dog collar divider"/> 
-				<br>
-			Email:<?php echo $rows['email']; ?>
-				<input type="hidden" name="email" value="<?php echo $rows['email'];?>">
-				<br>
-			Name:<?php echo $rows['name']; ?>
-				<input type="hidden" name="name" value="<?php echo $rows['name'];?>">
-				<br>
-			Description:<?php echo $rows['description']; ?>
-				<input type="hidden" name="description" value="<?php echo $rows['description'];?>">
-				<br>
-			Picture:<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
+				<br/>
+				<br/>
+			</center>
+			
+			</div>
+			<form action='dogprofile.php' method='post'>
+			<div class = 'cols2'>
+				
+			<h3>Description</h3><p><?php echo $rows['description']; ?>
+				<input type="hidden" name="description" value="<?php echo $rows['description'];?>"></p>
+				
+			<h3>Contact</h3><p><?php echo $rows['email']; ?>
+				<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
+			<input type="submit" value="Adopt Me!"/>	<br/>
+			<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
 					<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
-					<br>
-				<br>
-			<input type="submit" value="Adopt Me!"/>
+					<br/>
+			
+			<h4><center>Name<?php echo $rows['name']; ?>
+				<input type="hidden" name="name" value="<?php echo $rows['name'];?>"></center></h4>
+			</div>
+			<center>
+			<div id="nameimage">
+				<img src="images/blueCollar.png" alt="Dog collar divider"/> 
+				<br/>
+				<br/>
+			</center>
+			
+			</div>
+			
 			</div>
 
 		</form>
