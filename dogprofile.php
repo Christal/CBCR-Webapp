@@ -66,7 +66,7 @@
 		Current of Vaccinations: <?php echo $dog['current_vaccinations'];?><br>
 		Home Preferences: <?php echo $dog['home_preference'];?><br>
 		
-		<form action='adoptionapplication.php' method='post'>
+		<form action='adoptionform.php' method='post'>
 			<input type="submit" value="Apply to Adopt Me"/></td>
 		</form>
 			

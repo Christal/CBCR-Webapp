@@ -55,7 +55,9 @@
 					<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
 					<br>
 				<br>
-			<input type="submit" value="Adopt Me!"/>
+			<form action='adoptionform.php' method='post'>
+				<input type="submit" value="Apply to Adopt Me"/></td>
+			</form>
 			</div>
 
 		</form>
