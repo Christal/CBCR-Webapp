@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <head>
@@ -19,9 +20,6 @@
 		mysql_connect($host,$username,$password);
 		@mysql_select_db($database) or die( "Unable to select database");
 		
-		$username = $_SESSION['userName'];
-		$useremail = $_SESSION['userEmail'];
-		
 	?>
 	
 	<!-- HEADER: Banner goes here -->
@@ -35,18 +33,13 @@
 	</div>
 
 	<div id="container">
-	
-		<h1>Home Page for <?php echo $username . ' (' .$useremail . ')';?> </h1>
-		
-		<form action='CheckPassword.php' method='post'><input type='submit' name='checkpassword' value='Check Password'/></form>
-		<form action='Logout.php' method='post'><input type="Submit" value="Logout"></form>
-				
+			
 		<h2>Available Dogs</h2>
-		<?php $sql = "SELECT * FROM dogs";
+		<?php $sql = "SELECT * FROM dogs WHERE status='Courtesy'";
 			$result = mysql_query($sql);
 			while ($rows = mysql_fetch_array($result)) {
 		?>
-		<form action='dogs.php' method='post'>
+		<form action='dogprofile.php' method='post'>
 			<div id="nameimage">
 				<img src="images/redCollar.png" alt="Dog collar divider"/> 
 				<br>
@@ -63,7 +56,9 @@
 					<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
 					<br>
 				<br>
-			<input type="submit" value="Adopt Me!"/>
+			<form action='adoptionform.php' method='post'>
+				<input type="submit" value="Apply to Adopt Me"/></td>
+			</form>
 			</div>
 
 		</form>
@@ -72,41 +67,6 @@
 			$count=mysql_num_rows($result);
 		?>
 		
-		<h2>Your Dogs</h2>
-		
-		<?php $sql = "SELECT * FROM dogs WHERE email='$useremail'";
-			$result = mysql_query($sql);
-			while ($rows = mysql_fetch_array($result)) {
-		?>
-		<form action='dogs.php' method='post'>
-			<input type="hidden" name="email" value="<?php echo $useremail;?>">
-			Email:<?php echo $rows['email']; ?>
-				<input type="hidden" name="email" value="<?php echo $rows['email'];?>">
-				<br>
-			Name:<?php echo $rows['name']; ?>
-				<input type="hidden" name="name" value="<?php echo $rows['name'];?>">
-				<br>
-			Description:<?php echo $rows['description']; ?>
-				<input type="hidden" name="description" value="<?php echo $rows['description'];?>">
-				<br>
-			Picture:<img src="<?php echo $rows['URL']; ?>"/>
-					<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
-					<br>
-				<br>
-			<input type="submit" value="Adopt Me!"/></td>
-		</form>
-		<br></br>
-		<?php
-			}
-			mysql_close();
-		
-			$count=mysql_num_rows($result);
-			
-			if($count < 1){
-				echo "<p>You currently have no dog listings.</p>";
-			}
-		?>
-	
 		<!-- FOOTER: -->
 		<div id="footer">
 			<p>CBCR @2014</p>
