@@ -67,6 +67,7 @@ h4{
 #nameimage{
 	position: relative;
 	width: 100%;
+	margin-left: -20%;
 }
 #nameimage h3{
 	position: absolute;
@@ -89,10 +90,21 @@ h4{
 	-moz-column-rule-width: 1px;
 	-moz-column-rule-style: solid;
 	-moz-column-rule-color: #000;
-	 
+
 	-webkit-column-rule-width: 1px;
 	-webkit-column-rule-style: solid;
 	-webkit-column-rule-color: #000;
+}
+.cols2{
+	max-height: 70%;
+	max-width: 70%;
+	margin-left: 20%;
+}
+.cols2 h4{
+	font-family: "Amatic SC";
+	font-size: 250%;
+	color:#2e3f71;
+	margin: -1% 0 -1% 0;
 }
 #main{
 	width: 70%;
@@ -107,6 +119,12 @@ h4{
 	padding: 0px 10px;
 	background-color: #ffffff;
 	overflow: hidden;
+}
+#adoptionDiv img{
+	max-height: 70%;
+	max-width: 70%;
+	margin-left: 20%;
+	margin-bottom: 1%;
 }
 #footer{
 	width: 100%;

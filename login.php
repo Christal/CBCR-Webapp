@@ -5,6 +5,7 @@
 <head>
 	<title>Carolina Border Collie Rescue</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 	<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
 </head>
 
@@ -26,6 +27,7 @@
 			<li><a href="resources.html">Resources</a></li>
 		</ul>
 	</nav>
+
 	
 	<!-- CONTAINER: -->
 	<div id="container">
@@ -37,7 +39,8 @@
 				<p><input type="submit" value="Login"></p>
 				<p id="status"></p>
 			</form>
-			
+			<form action="Register.html" method="post"><input type="submit" value="Registration Page"></form>
+
 		</div>
 	
 		<!-- FOOTER: -->

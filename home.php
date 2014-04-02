@@ -3,6 +3,7 @@
 <head>
 	<title>Carolina Border Collie Rescue</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 	<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
 </head>
 
@@ -41,67 +42,73 @@
 		</ul>
 	</nav>
 
-	<div id="container">
-	
-		<h1>Home Page for <?php echo $username . ' (' .$useremail . ')';?> </h1>
-		
-		<form action='CheckPassword.php' method='post'><input type='submit' name='checkpassword' value='Check Password'/></form>
-		<form action='Logout.php' method='post'><input type="Submit" value="Logout"></form>
-				
-		<h2>Available Dogs</h2>
-		<?php $sql = "SELECT * FROM dogs";
-			$result = mysql_query($sql);
-			while ($rows = mysql_fetch_array($result)) {
-		?>
-		<form action='dogs.php' method='post'>
-			<div id="nameimage">
-				<img src="images/redCollar.png" alt="Dog collar divider"/> 
-				<br>
-			Email:<?php echo $rows['email']; ?>
-				<input type="hidden" name="email" value="<?php echo $rows['email'];?>">
-				<br>
-			Name:<?php echo $rows['name']; ?>
-				<input type="hidden" name="name" value="<?php echo $rows['name'];?>">
-				<br>
-			Description:<?php echo $rows['description']; ?>
-				<input type="hidden" name="description" value="<?php echo $rows['description'];?>">
-				<br>
-			Picture:<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
-					<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
-					<br>
-				<br>
-			<input type="submit" value="Adopt Me!"/>
-			</div>
 
-		</form>
+	<div id="container">
+				
+		<div id="adoptionDiv">	
+			<center><h1>Home Page for <?php echo $username . ' (' .$useremail . ')';?> </h1>
+			<form action='Logout.php' method='post'><input type="Submit" value="Logout"></form>
+	
+			<h4>Available Dogs</h4></center>
+			<?php $sql = "SELECT * FROM dogs";
+				$result = mysql_query($sql);
+				while ($rows = mysql_fetch_array($result)) {
+			?>
+			<form action='dogs.php' method='post'>
+				<div class = 'cols2'>
+					<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
+						<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
+						<br/>
+					<h4><?php echo $rows['name']; ?>
+						<input type="hidden" name="name" value="<?php echo $rows['name'];?>"></h4>
+						</br>
+					<h3>Description: </h3><p><?php echo $rows['description']; ?>
+						<input type="hidden" name="description" value="<?php echo $rows['description'];?>"></p>
+						
+					<h3>Contact: </h3><p><?php echo $rows['email']; ?>
+						<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
+					<input type="submit" value="Adopt Me!"/>	
+				</div>
+				<center>
+					<div id="nameimage">
+						<img src="images/redCollar.png" alt="Dog collar divider"/> 
+						<br><br/>
+					</div>
+				</center>
+			</form>
+		
 		<br></br>
 		<?php }
 			$count=mysql_num_rows($result);
 		?>
 		
-		<h2>Your Dogs</h2>
-		
-		<?php $sql = "SELECT * FROM dogs WHERE email='$useremail'";
-			$result = mysql_query($sql);
-			while ($rows = mysql_fetch_array($result)) {
-		?>
-		<form action='dogs.php' method='post'>
-			<input type="hidden" name="email" value="<?php echo $useremail;?>">
-			Email:<?php echo $rows['email']; ?>
-				<input type="hidden" name="email" value="<?php echo $rows['email'];?>">
-				<br>
-			Name:<?php echo $rows['name']; ?>
-				<input type="hidden" name="name" value="<?php echo $rows['name'];?>">
-				<br>
-			Description:<?php echo $rows['description']; ?>
-				<input type="hidden" name="description" value="<?php echo $rows['description'];?>">
-				<br>
-			Picture:<img src="<?php echo $rows['URL']; ?>"/>
-					<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
-					<br>
-				<br>
-			<input type="submit" value="Adopt Me!"/></td>
-		</form>
+		<center><h4>Your Dogs</h4></center>
+			<?php $sql = "SELECT * FROM dogs WHERE email='$useremail'";
+				$result = mysql_query($sql);
+				while ($rows = mysql_fetch_array($result)) {
+			?>
+			<form action='dogs.php' method='post'>
+				<div class = 'cols2'>
+					<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
+						<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
+						<br/>
+					<h4><?php echo $rows['name']; ?>
+						<input type="hidden" name="name" value="<?php echo $rows['name'];?>"></h4>
+						</br>
+					<h3>Description: </h3><p><?php echo $rows['description']; ?>
+						<input type="hidden" name="description" value="<?php echo $rows['description'];?>"></p>
+						
+					<h3>Contact: </h3><p><?php echo $rows['email']; ?>
+						<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
+					<input type="submit" value="View"/>	
+				</div>
+				<center>
+					<div id="nameimage">
+						<img src="images/redCollar.png" alt="Dog collar divider"/> 
+						<br><br/>
+					</div>
+				</center>
+			</form>
 		<br></br>
 		<?php
 			}
@@ -114,11 +121,13 @@
 			}
 		?>
 	
+		<!--<form action='CheckPassword.php' method='post'><input type='submit' name='checkpassword' value='Check Password'/></form>-->
+		
 		<!-- FOOTER: -->
 		<div id="footer">
 			<p>CBCR @2014</p>
 		</div>
-
+	</div>
 	</div>
 	
 </body>
