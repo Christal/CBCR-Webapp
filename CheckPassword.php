@@ -1,6 +1,6 @@
 <?php
 session_start();
-echo $_SESSION['userPassword'];
+echo $_SESSION['userPIN'];
 ?>
 
 <!DOCTYPE html>

@@ -16,9 +16,16 @@
 	</div>
 
 	<!-- NAVIGATION BAR: -->
-	<div id="nav">
-		<img alt="Navigation Bar" src="images/nav.png" />	
-	</div>
+	<nav>
+		<ul>
+			<li><a href="adoption.php">Adopt Me</a></li>
+			<li><a href="about.html">About Us</a></li>
+			<li><a href="#">Adopted</a></li>
+			<li><a href="support.html">How to Help</a></li>
+			<li><a href="contacts.html">Contacts</a></li>
+			<li><a href="resources.html">Resources</a></li>
+		</ul>
+	</nav>
 	
 	<!-- CONTAINER: -->
 	<div id="container">
@@ -30,8 +37,7 @@
 				<p><input type="submit" value="Login"></p>
 				<p id="status"></p>
 			</form>
-			<form action="Register.html" method="post"><input type="submit" value="Registration Page"></form>
-
+			
 		</div>
 	
 		<!-- FOOTER: -->
