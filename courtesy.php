@@ -42,6 +42,7 @@
 
 
 	<div id="container">
+<<<<<<< HEAD
 		<div id="adoptionDiv">	
 			<center><h4>Courtesy Dogs</h4></center>
 			<?php $sql = "SELECT * FROM dogs WHERE status='Courtesy'";
@@ -69,6 +70,36 @@
 						<br><br/>
 					</div>
 				</center>
+=======
+			
+		<h2>Courtesy Dogs</h2>
+		<?php $sql = "SELECT * FROM dogs WHERE status='Courtesy'";
+			$result = mysql_query($sql);
+			while ($rows = mysql_fetch_array($result)) {
+		?>
+		<form action='dogprofile.php' method='post' onsubmit="return checkCaptcha();">
+			<div id="nameimage">
+				<img src="images/redCollar.png" alt="Dog collar divider"/> 
+				<br>
+			Email:<?php echo $rows['email']; ?>
+				<input type="hidden" name="email" value="<?php echo $rows['email'];?>">
+				<br>
+			Name:<?php echo $rows['name']; ?>
+				<input type="hidden" name="name" value="<?php echo $rows['name'];?>">
+				<br>
+			Description:<?php echo $rows['description']; ?>
+				<input type="hidden" name="description" value="<?php echo $rows['description'];?>">
+				<br>
+			Picture:<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
+					<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
+					<br>
+				<br>
+			<p>
+			Are you a human? <input type="checkbox" id="captcha"> Yes!
+			<p>
+			<form action='adoptionform.php' method='post'>
+				<input type="submit" value="Apply to Adopt Me"/></td>
+>>>>>>> b9beed578dda65d01ca531e962cbddd10d5d31b6
 			</form>
 		<br></br>
 		<?php }
@@ -80,6 +111,16 @@
 			<p>CBCR @2014</p>
 		</div>
 	</div>
+	
+	<script language="javascript" type="text/javascript">
+		function checkCaptcha() {
+			if(!(document.getElementById("captcha").checked))
+			{
+				alert("Submission Failed. Hit the checkbox to make sure you're not a spam bot.");
+				return false;
+			}
+		}	
+	</script>
 	
 </body>
 </html>

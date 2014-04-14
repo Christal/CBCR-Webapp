@@ -13,7 +13,6 @@
 	</div>
 
 	<!-- NAVIGATION BAR: -->
-	<!-- NAVIGATION BAR: -->
 	<nav>
 		<ul>
 			<li><a href="adoption.php">Adopt Me</a></li>
@@ -30,7 +29,11 @@
 	<div id="container">
 		<!-- MAIN: -->
 		<div>
+<<<<<<< HEAD
 			<form name= "dogSubmit" action="submitApplication.php" method="post">
+=======
+			<form name= "dogSubmit" action="" method="get" onsubmit="return checkCaptcha();">
+>>>>>>> b9beed578dda65d01ca531e962cbddd10d5d31b6
 			<!--Form Type: <select id="formID" name ="form" onchange ="jsfunc1()" size=1>
 				<option selected>Fostered Dog</option>
 				<option value="courtesy" id="2">Courtesy Dog</option>
@@ -112,6 +115,8 @@
 			<input type="radio" name="Facebook" value="No">No<br>
 			
 			<p>
+			Are you a human? <input type="checkbox" id="captcha"> Yes!
+			<p>
 		<input type=submit value="Submit Form" name="submit">
 		<br>
 	</form>
@@ -121,6 +126,16 @@
 			<p>CBCR @2014</p>
 		</div>
 	</div>
+	
+	<script language="javascript" type="text/javascript">
+		function checkCaptcha() {
+			if(!(document.getElementById("captcha").checked))
+			{
+				alert("Submission Failed. Hit the checkbox to make sure you're not a spam bot.");
+				return false;
+			}
+		}	
+	</script>
 	
 </body>
 </html>
