@@ -11,7 +11,7 @@
 
 	<!-- HEADER: Banner goes here -->
 	<div id="header">
-		<img alt="Carolina Border Collie Rescue" src="images/header.png"/>
+		<a href="index.php"><img alt="Carolina Border Collie Rescue" src="images/header.png"/></a>
 	</div>
 
 <!-- NAVIGATION BAR: -->

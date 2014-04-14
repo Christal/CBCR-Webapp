@@ -41,7 +41,7 @@
 
 	<!-- HEADER: Banner goes here -->
 	<div id="header">
-		<img alt="Carolina Border Collie Rescue" src="images/header.png"/>
+		<a href="index.php"><img alt="Carolina Border Collie Rescue" src="images/header.png"/></a>
 	</div>
 
 	<!-- NAVIGATION BAR: -->
@@ -50,7 +50,7 @@
 		<ul>
 			<li><a href="adoption.php">Adopt Me</a></li>
 			<li><a href="about.html">About Us</a></li>
-			<li><a href="#">Adopted</a></li>
+			<li><a href="courtesy.php">Courtesy</a></li>
 			<li><a href="support.html">How to Help</a></li>
 			<li><a href="contacts.html">Contacts</a></li>
 			<li><a href="resources.html">Resources</a></li>
@@ -60,7 +60,7 @@
 
 	<div id="container">
 		
-		<div class='cols2'>
+		<div class='cols1'>
 			<h1>User: <?php echo $dogPosterName. ' (' .$email . ')';?></h1>
 			
 			<h2>Contact: <?php echo $dogPosterName. ' (' .$email . ')';?></h2>

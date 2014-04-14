@@ -27,7 +27,7 @@
 	
 	<!-- HEADER: Banner goes here -->
 	<div id="header">
-		<img alt="Carolina Border Collie Rescue" src="images/header.png"/>
+		<a href="index.php"><img alt="Carolina Border Collie Rescue" src="images/header.png"/></a>
 	</div>
 
 	<!-- NAVIGATION BAR: -->
@@ -35,7 +35,7 @@
 		<ul>
 			<li><a href="adoption.php">Adopt Me</a></li>
 			<li><a href="about.html">About Us</a></li>
-			<li><a href="#">Adopted</a></li>
+			<li><a href="courtesy.php">Courtesy</a></li>
 			<li><a href="support.html">How to Help</a></li>
 			<li><a href="contacts.html">Contacts</a></li>
 			<li><a href="resources.html">Resources</a></li>
@@ -47,6 +47,9 @@
 				
 		<div id="adoptionDiv">	
 			<center><h1>Home Page for <?php echo $username . ' (' .$useremail . ')';?> </h1>
+			<form action='adoptionform.php' method='get'>
+				<input type='submit' value='Submit Dog Application'/>
+			</form>
 			<form action='Logout.php' method='post'><input type="Submit" value="Logout"></form>
 	
 			<h4>Available Dogs</h4></center>
@@ -55,7 +58,7 @@
 				while ($rows = mysql_fetch_array($result)) {
 			?>
 			<form action='dogs.php' method='post'>
-				<div class = 'cols2'>
+				<div class = 'cols1'>
 					<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
 						<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
 						<br/>
@@ -88,7 +91,7 @@
 				while ($rows = mysql_fetch_array($result)) {
 			?>
 			<form action='dogs.php' method='post'>
-				<div class = 'cols2'>
+				<div class = 'cols1'>
 					<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
 						<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
 						<br/>

@@ -95,12 +95,31 @@ h4{
 	-webkit-column-rule-style: solid;
 	-webkit-column-rule-color: #000;
 }
-.cols2{
+.cols1 {
+	-moz-column-count:2; /* Firefox */
+	-webkit-column-count:2;
+	column-count: 2;
+	-moz-column-gap:30px; /* Firefox */
+	-webkit-column-gap:30px;
+	column-gap: 30px;
+	column-rule-width: 1px;
+	column-rule-style: solid;
+	column-rule-color: #000;
+  
+	-moz-column-rule-width: 1px;
+	-moz-column-rule-style: solid;
+	-moz-column-rule-color: #000;
+
+	-webkit-column-rule-width: 1px;
+	-webkit-column-rule-style: solid;
+	-webkit-column-rule-color: #000;
+}
+.cols1{
 	max-height: 70%;
 	max-width: 70%;
 	margin-left: 20%;
 }
-.cols2 h4{
+.cols1 h4{
 	font-family: "Amatic SC";
 	font-size: 250%;
 	color:#2e3f71;
