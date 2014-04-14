@@ -48,7 +48,7 @@
 			$result = mysql_query($sql);
 			while ($rows = mysql_fetch_array($result)) {
 		?>
-		<form action='dogprofile.php' method='post'>
+		<form action='dogprofile.php' method='post' onsubmit="return checkCaptcha();">
 			<div id="nameimage">
 				<img src="images/redCollar.png" alt="Dog collar divider"/> 
 				<br>
@@ -65,6 +65,9 @@
 					<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
 					<br>
 				<br>
+			<p>
+			Are you a human? <input type="checkbox" id="captcha"> Yes!
+			<p>
 			<form action='adoptionform.php' method='post'>
 				<input type="submit" value="Apply to Adopt Me"/></td>
 			</form>
@@ -82,6 +85,16 @@
 		</div>
 
 	</div>
+	
+	<script language="javascript" type="text/javascript">
+		function checkCaptcha() {
+			if(!(document.getElementById("captcha").checked))
+			{
+				alert("Submission Failed. Hit the checkbox to make sure you're not a spam bot.");
+				return false;
+			}
+		}	
+	</script>
 	
 </body>
 </html>

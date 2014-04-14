@@ -169,6 +169,10 @@ nav li a:hover {
     background: #e0bb75;
 }
 
+form .hidden {
+	display: none;
+}
+
 /* MEDIA QUERIES*/
 @media only screen and (max-width : 1220px),
 only screen and (max-device-width : 1220px){
