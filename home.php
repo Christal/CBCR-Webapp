@@ -47,7 +47,7 @@
 				
 		<div id="adoptionDiv">	
 			<center><h1>Home Page for <?php echo $username . ' (' .$useremail . ')';?> </h1>
-			<form action='adoptionform.php' method='get'>
+			<form action='submitDog.php' method='get'>
 				<input type='submit' value='Submit Dog Application'/>
 			</form>
 			<form action='Logout.php' method='post'><input type="Submit" value="Logout"></form>

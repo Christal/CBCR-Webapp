@@ -37,7 +37,7 @@
 				<option value="shelter" id="3">Shelter Dog</option>
 				</select><br>-->
 			Contact Info:  <input type ="text" name = "Contact"><br>
-			<!--Name: <input type ="text" name = "Name"><br>
+			Name: <input type ="text" name = "Name"><br>
 			Sex: <br>
 				<input type="radio" name="Sex" value="Male">Male<br>
 				<input type="radio" name="Sex" value="Female">Female<br>
@@ -110,7 +110,7 @@
 			Is this dog listed on Facebook?<br>
 			<input type="radio" name="Facebook" value="Yes">Yes<br>
 			<input type="radio" name="Facebook" value="No">No<br>
-			-->
+			
 			<p>
 		<input type=submit value="Submit Form" name="submit">
 		<br>

@@ -26,7 +26,6 @@
 		$email = $_POST['email'];
 		$name = $_POST['name'];
 		$URL = $_POST['URL'];
-		$description = $_POST['description'];
 		
 		$findDogQuery = "SELECT * FROM dogs WHERE email = '$email' AND name = '$name'";
 		$dogResult = mysql_query($findDogQuery);
@@ -73,7 +72,7 @@
 			Coat Color: <?php echo $dog['coat_color'];?><br>
 			Coat Type: <?php echo $dog['coat_type'];?><br>
 			Activity Level: <?php echo $dog['activity_level'];?><br>
-			Description: <?php echo $description?><br>
+			Description: <?php echo $dog['description'];?><br>
 			<br>
 			Tag#: <?php echo $dog['tag'];?><br>
 			Status: <?php echo $dog['status'];?><br>

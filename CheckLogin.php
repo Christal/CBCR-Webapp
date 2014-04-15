@@ -22,12 +22,22 @@ $loginEmail = mysql_real_escape_string($loginEmail);
 $loginPassword = mysql_real_escape_string($loginPassword);
 
 $sql="SELECT * FROM users WHERE email='$loginEmail' and password='$loginPassword'";
+$myAdmin ="SELECT * FROM users WHERE email='$loginEmail' and admin =1";
+
+
 $result=mysql_query($sql);
+$result2=mysql_query($myAdmin);
 
 // Mysql_num_row is counting table row
 $count=mysql_num_rows($result);
-if($loginEmail ==""  or $loginPassword=="" ){
-	echo "FUCK BLANK SHIT";
+$count2=mysql_num_rows($result2);
+
+if($count2 == 1){
+$row = mysql_fetch_assoc($result2);
+	$_SESSION['userEmail'] = $row['email'];
+	$_SESSION['userPassword'] = $row['password'];
+	$_SESSION['userName'] = $row['name'];
+	header("location:adminHome.php");
 }
 // If result matched $myusername and $mypassword, table row must be 1 row
 elseif($count==1){

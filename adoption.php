@@ -55,9 +55,6 @@
 					<h4><?php echo $rows['name']; ?>
 						<input type="hidden" name="name" value="<?php echo $rows['name'];?>"></h4>
 						</br>
-					<h3>Description: </h3><p><?php echo $rows['description']; ?>
-						<input type="hidden" name="description" value="<?php echo $rows['description'];?>"></p>
-						
 					<h3>Contact: </h3><p><?php echo $rows['email']; ?>
 						<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
 					<input type="submit" value="Adopt Me!"/>	
@@ -77,9 +74,6 @@
 					<h4><?php echo $rows['name']; ?>
 						<input type="hidden" name="name" value="<?php echo $rows['name'];?>"></h4>
 						</br>
-					<h3>Description: </h3><p><?php echo $rows['description']; ?>
-						<input type="hidden" name="description" value="<?php echo $rows['description'];?>"></p>
-						
 					<h3>Contact: </h3><p><?php echo $rows['email']; ?>
 						<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
 					<input type="submit" value="Adopt Me!"/>	
