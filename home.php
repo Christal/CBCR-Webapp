@@ -22,7 +22,7 @@
 		
 		$username = $_SESSION['userName'];
 		$useremail = $_SESSION['userEmail'];
-		
+
 	?>
 	
 	<!-- HEADER: Banner goes here -->
@@ -50,6 +50,12 @@
 			<form action='submitDog.php' method='get'>
 				<input type='submit' value='Submit Dog Application'/>
 			</form>
+			<form action='submitCourtesy.php' method='get'>
+				<input type='submit' value='Submit Courtesy Dog Application'/>
+			</form>
+			<form action='printList.php' method='get'>
+				<input type='submit' value='Print List'/>
+			</form>
 			<form action='Logout.php' method='post'><input type="Submit" value="Logout"></form>
 	
 			<h4>Available Dogs</h4></center>
@@ -72,6 +78,7 @@
 						<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
 					<input type="submit" value="Adopt Me!"/>	
 				</div>
+				
 				<center>
 					<div id="nameimage">
 						<img src="images/redCollar.png" alt="Dog collar divider"/> 
@@ -107,7 +114,7 @@
 				</div>
 				<center>
 					<div id="nameimage">
-						<img src="images/redCollar.png" alt="Dog collar divider"/> 
+						<img src="images/blueCollar.png" alt="Dog collar divider"/> 
 						<br><br/>
 					</div>
 				</center>

@@ -55,6 +55,8 @@
 					<h4><?php echo $rows['name']; ?>
 						<input type="hidden" name="name" value="<?php echo $rows['name'];?>"></h4>
 						</br>
+					<h3>Sex: </h3><p><?php echo $rows['sex']; ?>
+						<input type="hidden" name="email" value="<?php echo $rows['sex'];?>"></p>
 					<h3>Contact: </h3><p><?php echo $rows['email']; ?>
 						<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
 					<input type="submit" value="Adopt Me!"/>	
@@ -66,25 +68,7 @@
 					</div>
 				</center>
 			</form>
-			<form action='dogprofile.php' method='post'>
-				<div class = 'cols1'>
-					<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
-						<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
-						<br/>
-					<h4><?php echo $rows['name']; ?>
-						<input type="hidden" name="name" value="<?php echo $rows['name'];?>"></h4>
-						</br>
-					<h3>Contact: </h3><p><?php echo $rows['email']; ?>
-						<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
-					<input type="submit" value="Adopt Me!"/>	
-				</div>
-				<center>
-					<div id="nameimage">
-						<img src="images/blueCollar.png" alt="Dog collar divider"/> 
-						<br><br/>
-					</div>
-				</center>
-			</form>
+			
 			<br></br>
 			<?php }
 				$count=mysql_num_rows($result);

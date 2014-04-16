@@ -94,14 +94,6 @@
 			<form action='adoptionform.php' method='post'>
 				<input type="submit" value="Apply to Adopt Me"/></td>
 			</form>
-		
-		<?php 
-			if($email == $userEmail){
-				echo "<form action='submitdog.php' method='get'>";
-				echo "<input type='submit' value='Submit Dog Application'/>";
-				echo "</form>";
-			} 
-		?>
 			
 		<form name = "input" action = "home.php" method = "post">
 			<input type="submit" value="Back to Home" name="backtohome"/>

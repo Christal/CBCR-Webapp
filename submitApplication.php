@@ -39,6 +39,7 @@ $registerName = stripslashes($registerName);
 $registerEmail = stripslashes($registerEmail);
 
 $registerURLLink = "images/" . $registerURL;
+$registerDes = addslashes($registerDescription);
 
 $query = "INSERT INTO dogs (
 		email, 
@@ -74,7 +75,7 @@ $query = "INSERT INTO dogs (
 		'$registerCoatType',
 		'$registerActivity',
 		'$registerURLLink',
-		'$registerDescription',
+		'$registerDes',
 		'$registerTag',
 		'$registerStatus',
 		'$registerReleaseDate',

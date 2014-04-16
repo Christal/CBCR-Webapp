@@ -48,7 +48,12 @@
 		<div id="adoptionDiv">	
 			<center><h1>Admin Home Page for <?php echo $username . ' (' .$useremail . ')';?> </h1>
 			<form action='Logout.php' method='post'><input type="Submit" value="Logout"></form>
-	
+			<form action='submitDog.php' method='get'>
+				<input type='submit' value='Submit Dog Application'/>
+			</form>
+			<form action='submitCourtesy.php' method='get'>
+				<input type='submit' value='Submit Courtesy Dog Application'/>
+			</form>
 		<h4>Dogs to be Approved</h4></center>
 				<?php $sql = "SELECT * FROM dogs WHERE admin =1";
 					$result = mysql_query($sql);

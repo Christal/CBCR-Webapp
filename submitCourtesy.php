@@ -58,40 +58,14 @@
 				<option value="70+ lbs">70+ lbs</option>
 				</select> <br>
 			Location (City, State): <input type="text" name ="Location"><br>
-			Coat Color: <select name="CoatColor" size=1>
-				<option value="">Select an option</option>
-			 	<option value="Black/White">Black/White</option>
-				<option value="Blond/White">Blond/White</option>
-				<option value="Brindle">Brindle</option>
-				<option value="Tri-color">Tri-color</option>
-				<option value="Other">Other</option>
-				</select><br>
-			Coat Type: <select name="CoatType" size=1>
-				<option value="">Select an option</option>
-				<option value="Smooth">Smooth</option>
-				<option value="Rough">Rough</option>
-				<option value="Medium">Medium</option>
-				<option value="Long">Long</option>
-				<option value="Other">Other</option>
-				</select><br>
-			Activity Level:<select name="Activity" size=1>
-				<option value="">Select an option</option>
-				<option value="Active">Active</option>
-				<option value="Sporting">Sporting</option>
-				<option value="Working">Working</option>
-				<option value="Ready for Retirement">Ready for Retirement</option>
-				</select><br>
 			Upload a Picture: <input type="file" name="URL"> <br>
 			Description: <input type="text" name ="Description"><br>
-			Tag: <input type="number" name ="Tag"><br>
 			Status:<select name="Status" size=1>
 				<option value="">Select an option</option>
 				<option value="Shelter">Shelter</option>
 				<option value="CBCR Foster">CBCR Foster</option>
 				<option value="Independent Foster">Independent Foster</option>
 				</select><br>	
-			Release Date: <input type="date" name ="ReleaseDate"><br>
-			Last Updated: <input type="date" name ="LastUpdated"><br>
 			Is this dog up to date on it's vaccinations?<br>
 			<input type="radio" name="Vaccinations" value="Yes">Yes<br>
 			<input type="radio" name="Vaccinations" value="No">No<br>
@@ -100,17 +74,15 @@
 			<input type="radio" name="Spayed" value="No">No<br>
 			Is this dog house trained?<br>
 			<input type="radio" name="HouseTrained" value="Yes">Yes<br>
-			<input type="radio" name="HouseTrained" value="No">No<br>
-			
+			<input type="radio" name="HouseTrained" value="No">No<br>	
 			Home Preference: <input type ="text" name = "HomePreference"><br>
-			
 			Is this dog listed on PetFinder?<br>
 			<input type="radio" name="PetFinder" value="Yes">Yes<br>
 			<input type="radio" name="PetFinder" value="No">No<br>
+			If yes, then please provide the link: <input type ="text" name ="petFinderLink"><br>
 			Is this dog listed on CBCR's Facebook?<br>
 			<input type="radio" name="Facebook" value="Yes">Yes<br>
 			<input type="radio" name="Facebook" value="No">No<br>
-			
 			<p>
 				Are you a human? <br>
 				<input type="checkbox" id="captcha"> Yes!

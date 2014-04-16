@@ -44,11 +44,14 @@
 	<div id="container">
 		<div id="adoptionDiv">	
 			<center><h4>Courtesy Dogs</h4></center>
+			<form action='submitCourtesy.php' method='get'>
+				<input type='submit' value='Submit Courtesy Dog Application'/>
+			</form>
 			<?php $sql = "SELECT * FROM dogs WHERE status='Courtesy'";
 				$result = mysql_query($sql);
 				while ($rows = mysql_fetch_array($result)) {
 			?>
-			<form action='dogprofile.php' method='post'>
+			<form action='dogprofile.php' method='post' >
 				<div class = 'cols1'>
 					<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
 						<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">

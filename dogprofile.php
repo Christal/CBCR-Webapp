@@ -79,6 +79,7 @@
 			<h3>Contact</h3> <?php echo $dogPosterName. ' (' .$email . ')';?>
 			<br></br>
 			<form action='adoptionform.php' method='post'>
+				
 				<input type="submit" value="Apply to Adopt Me"/></td>
 			</form>
 			</div>	
@@ -89,5 +90,7 @@
 			
 		</div>
 	</div>
+	
+	
 </body>
 </html>
