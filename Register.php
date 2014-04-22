@@ -16,6 +16,7 @@ $registerName=$_POST['userName'];
 $registerEmail=$_POST['userEmail'];
 $registerPassword=$_POST['userPassword'];
 $registerConfirmPassword=$_POST['userConfirmPassword'];
+$registerAdminSelection=$_POST['admin'];
 
 // To protect MySQL injection
 $registerName = stripslashes($registerName);
@@ -27,29 +28,32 @@ $registerEmail = mysql_real_escape_string($registerEmail);
 $registerPassword = mysql_real_escape_string($registerPassword);
 $registerConfirmPassword = mysql_real_escape_string($registerConfirmPassword);
 
-$query = "INSERT INTO $tbl_name VALUES('$registerEmail', '$registerName', '$registerPassword')";
 
-$result = mysql_query($query);
 
 $usercheck = $_POST['userEmail'];
 $check = mysql_query("SELECT email FROM users WHERE email = '$usercheck'") 
 or die(mysql_error());
 $check2 = mysql_num_rows($check);
+
 if ($check2 != 0) {
- 		die('Sorry, the email '.$_POST['userEmail'].' is already in use.');
+	header("location:registerFailEmail.html");
+}
+elseif($_POST['admin'] == ""){
+	header("location:registerFail.html");
 }
 elseif($_POST['userPassword'] != $_POST['userConfirmPassword']){
-	echo "Passwords do not match";
-}
-elseif(!$result){
-	echo "SOMETHING WENT FUCKING WRONG";
+	header("location:registerFail.html");
 }
 elseif($registerName == "" or $registerEmail ==""  or $registerPassword=="" ){
 	header("location:registerFail.html");
 }
 else{
-	header("location:success.html");
+	$query = "INSERT INTO $tbl_name VALUES('','$registerEmail', '$registerName', '$registerPassword', '$registerAdminSelection')";
+	$result = mysql_query($query);
+	header("location:members.php");
 }
+
+
 mysql_close();
 
 ob_end_flush();

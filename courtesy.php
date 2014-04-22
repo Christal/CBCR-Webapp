@@ -1,4 +1,15 @@
+<?php
+	session_start();
+	
+	$host="localhost";
+	$username="root";
+	$password="cs4912";
+	$database="cs4912";
 
+	mysql_connect($host,$username,$password);
+	@mysql_select_db($database) or die( "Unable to select database");
+	
+?>
 <!DOCTYPE html>
 
 <head>
@@ -10,18 +21,7 @@
 
 <body>
 
-	<?php
-		session_start();
-		
-		$host="localhost";
-		$username="root";
-		$password="cs4912";
-		$database="cs4912";
 
-		mysql_connect($host,$username,$password);
-		@mysql_select_db($database) or die( "Unable to select database");
-		
-	?>
 	
 	<!-- HEADER: Banner goes here -->
 	<div id="header">
@@ -31,9 +31,11 @@
 	<!-- NAVIGATION BAR: -->
 	<nav>
 		<ul>
+			<li><a href="index.php">Home</a></li>
 			<li><a href="adoption.php">Adopt Me</a></li>
 			<li><a href="about.html">About Us</a></li>
 			<li><a href="courtesy.php">Courtesy</a></li>
+			<li><a href="adopted.php">Adopted</a></li>
 			<li><a href="support.html">How to Help</a></li>
 			<li><a href="contacts.html">Contacts</a></li>
 			<li><a href="resources.html">Resources</a></li>

@@ -57,7 +57,7 @@ h4{
 #sidebar{
 	width: 20%;
 	float: left;
-	padding: 0px 10px;
+	padding: 0px 20px 0px 0px;
 	background-color: #ffffff;
 	overflow: hidden;
 }
@@ -152,7 +152,7 @@ h4{
 	padding: 0px 10px;
 	background-color: #ffffff;
 }
-
+form { display: inline; }
 nav *{
 	padding: 0;
 	width: 100%;
@@ -181,7 +181,7 @@ nav li a {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    width: 16.666666667%;
+    width: 12.5%;
 }
 
 nav li a:hover {

@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-
-<head>
-	<title>Carolina Border Collie Rescue</title>
-	<link href="css/style.css" rel="stylesheet" type="text/css"/>
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-	<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-
 	<?php
 		session_start();
 		
@@ -38,6 +27,19 @@
 		
 	?>
 
+<!DOCTYPE html>
+
+<head>
+	<title>Carolina Border Collie Rescue</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+
+
 	<!-- HEADER: Banner goes here -->
 	<div id="header">
 		<a href="index.php"><img alt="Carolina Border Collie Rescue" src="images/header.png"/></a>
@@ -47,9 +49,11 @@
 	<!-- NAVIGATION BAR: -->
 	<nav>
 		<ul>
+			<li><a href="index.php">Home</a></li>
 			<li><a href="adoption.php">Adopt Me</a></li>
 			<li><a href="about.html">About Us</a></li>
 			<li><a href="courtesy.php">Courtesy</a></li>
+			<li><a href="adopted.php">Adopted</a></li>
 			<li><a href="support.html">How to Help</a></li>
 			<li><a href="contacts.html">Contacts</a></li>
 			<li><a href="resources.html">Resources</a></li>
@@ -73,6 +77,7 @@
 			Coat Type: <?php echo $dog['coat_type'];?><br>
 			Activity Level: <?php echo $dog['activity_level'];?><br>
 			Description: <?php echo $dog['description'];?><br>
+			Video Link: <?php echo $dog['video'];?><br>
 			<br>
 			Tag#: <?php echo $dog['tag'];?><br>
 			Status: <?php echo $dog['status'];?><br>

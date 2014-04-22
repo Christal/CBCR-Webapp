@@ -1,4 +1,4 @@
-	<?php
+<?php
 		session_start();
 		
 		$host="localhost";
@@ -21,7 +21,7 @@
 
 <body>
 
-
+	
 	
 	<!-- HEADER: Banner goes here -->
 	<div id="header">

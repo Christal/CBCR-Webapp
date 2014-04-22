@@ -13,12 +13,13 @@
 	</div>
 
 	<!-- NAVIGATION BAR: -->
-	<!-- NAVIGATION BAR: -->
 	<nav>
 		<ul>
+			<li><a href="index.php">Home</a></li>
 			<li><a href="adoption.php">Adopt Me</a></li>
 			<li><a href="about.html">About Us</a></li>
 			<li><a href="courtesy.php">Courtesy</a></li>
+			<li><a href="adopted.php">Adopted</a></li>
 			<li><a href="support.html">How to Help</a></li>
 			<li><a href="contacts.html">Contacts</a></li>
 			<li><a href="resources.html">Resources</a></li>
@@ -82,6 +83,7 @@
 				<option value="Ready for Retirement">Ready for Retirement</option>
 				</select><br>
 			Upload a Picture: <input type="file" name="URL"> <br>
+			Video Link: <input type="text" name ="Video"><br>
 			Description: <input type="text" name ="Description"><br>
 			Tag: <input type="number" name ="Tag"><br>
 			Status:<select name="Status" size=1>
@@ -91,7 +93,7 @@
 				<option value="Independent Foster">Independent Foster</option>
 				</select><br>	
 			Release Date: <input type="date" name ="ReleaseDate"><br>
-			Last Updated: <input type="date" name ="LastUpdated"><br>
+			Last Updated: <input type="hidden" name ="LastUpdated"><br>
 			Is this dog up to date on it's vaccinations?<br>
 			<input type="radio" name="Vaccinations" value="Yes">Yes<br>
 			<input type="radio" name="Vaccinations" value="No">No<br>
@@ -111,10 +113,6 @@
 			<input type="radio" name="Facebook" value="Yes">Yes<br>
 			<input type="radio" name="Facebook" value="No">No<br>
 			
-			<p>
-				Are you a human? <br>
-				<input type="checkbox" id="captcha"> Yes!
-			</p>
 		<input type=submit value="Submit Form" name="submit">
 		<br>
 	</form>
@@ -125,15 +123,6 @@
 		</div>
 	</div>
 	
-	<script language="javascript" type="text/javascript">
-		function checkCaptcha() {
-			if(!(document.getElementById("captcha").checked))
-			{
-				alert("Submission Failed. Hit the checkbox to make sure you're not a spam bot.");
-				return false;
-			}
-		}	
-	</script>
 </body>
 </html>
 

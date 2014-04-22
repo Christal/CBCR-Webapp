@@ -22,11 +22,12 @@ $registerCoatColor=$_POST['CoatColor'];
 $registerCoatType=$_POST['CoatType'];
 $registerActivity=$_POST['Activity'];
 $registerURL=$_POST['URL'];
+$registerVideo=$_POST['Video'];
 $registerDescription=$_POST['Description'];
 $registerTag=$_POST['Tag'];
 $registerStatus=$_POST['Status'];
 $registerReleaseDate=$_POST['ReleaseDate'];
-$registerLastUpdated=$_POST['LastUpdated'];
+$registerLastUpdated=$now = date('Y-m-d H-i-s');
 $registerHouseTrained=$_POST['HouseTrained'];
 $registerSpayed=$_POST['Spayed'];
 $registerVaccinations=$_POST['Vaccinations'];
@@ -52,6 +53,7 @@ $query = "INSERT INTO dogs (
 		coat_type,
 		activity_level,
 		URL,
+		video,
 		description,
 		tag,
 		status,
@@ -75,6 +77,7 @@ $query = "INSERT INTO dogs (
 		'$registerCoatType',
 		'$registerActivity',
 		'$registerURLLink',
+		'$registerVideo',
 		'$registerDes',
 		'$registerTag',
 		'$registerStatus',
@@ -98,7 +101,7 @@ elseif($registerName == "" or $registerEmail ==""){
 	header("location:registerFail.html");
 }
 else{
-	header("location:success.html");
+	header("location:adminHome.php");
 }
 mysql_close();
 

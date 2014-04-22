@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <title>Carolina Border Collie Rescue</title>
@@ -29,24 +28,28 @@
 		</ul>
 	</nav>
 
-    <div id="container">
-        <form action="Register.php" method="post">
-			Name: <input type="text" name="userName"><br>
-			E-mail: <input type="email" name="userEmail"><br>
-			Password: <input type="password" name="userPassword"><br>
-			Confirm Password: <input type="password" name="userConfirmPassword"><br>
-			Give this member administrative priviledges?<br>
-			<input type="radio" name="admin" value="1">Yes<br>
-			<input type="radio" name="admin" value="0">No<br>
-			<input type="Submit" value="Register">
-		</form>
-		
+	<div id="container">
+		<p>
+			<span style="color:red;">*Sorry, that email already exists in the system.
+		</p>
+        <div>
+            <form action="Register.php" method="post">
+				Name: <input type="text" name="name"><br>
+				E-mail: <input type="email" name="email"><br>
+				Password: <input type="password" name="password"><br>
+				Confirm Password: <input type="password" name="confirm_password"><br>
+				Give this member administrative priviledges?<br>
+				<input type="radio" name="admin" value="1">Yes<br>
+				<input type="radio" name="admin" value="0">No<br>
+				<input type="Submit" value="Register">
+			</form>
+        </div>
+
 		<!-- FOOTER: -->
 		<div id="footer">
 			<p>CBCR @2014</p>
 		</div>
-
 	</div>
-		
+
 </body>
 </html>

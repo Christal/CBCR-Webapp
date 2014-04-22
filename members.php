@@ -9,6 +9,9 @@
 		mysql_connect($host,$username,$password);
 		@mysql_select_db($database) or die( "Unable to select database");
 		
+		$username = $_SESSION['userName'];
+		$useremail = $_SESSION['userEmail'];
+		
 	?>
 	<!DOCTYPE html>
 
@@ -47,24 +50,22 @@
 				
 		<div id="adoptionDiv">	
 
-		<h4>Members</h4></center>
+			<h4>Members</h4></center>
 				<?php $sql = "SELECT * FROM users";
 					$result = mysql_query($sql);
 					while ($rows = mysql_fetch_array($result)) {
 				?>
-				<form action='members.php' method='post'>
+				<form action='remove.php' method='post'>
 					<div>
 						<?php echo $rows['email']; ?>
-							<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
+						<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
 						<input type="submit" value="Remove Member"/>	
 					</div>
 				</form>
-			
-			<br></br>
-			<?php }
-				$count=mysql_num_rows($result);
-			?>
-	
+				<br></br>
+				<?php }
+					$count=mysql_num_rows($result);
+				?>
 			<!-- FOOTER: -->
 			<div id="footer">
 				<p>CBCR @2014</p>

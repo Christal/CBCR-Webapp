@@ -13,12 +13,13 @@
 	</div>
 
 	<!-- NAVIGATION BAR: -->
-	<!-- NAVIGATION BAR: -->
 	<nav>
 		<ul>
+			<li><a href="index.php">Home</a></li>
 			<li><a href="adoption.php">Adopt Me</a></li>
 			<li><a href="about.html">About Us</a></li>
 			<li><a href="courtesy.php">Courtesy</a></li>
+			<li><a href="adopted.php">Adopted</a></li>
 			<li><a href="support.html">How to Help</a></li>
 			<li><a href="contacts.html">Contacts</a></li>
 			<li><a href="resources.html">Resources</a></li>
@@ -61,10 +62,7 @@
 			Upload a Picture: <input type="file" name="URL"> <br>
 			Description: <input type="text" name ="Description"><br>
 			Status:<select name="Status" size=1>
-				<option value="">Select an option</option>
-				<option value="Shelter">Shelter</option>
-				<option value="CBCR Foster">CBCR Foster</option>
-				<option value="Independent Foster">Independent Foster</option>
+				<option value="Courtesy">Courtesy</option>
 				</select><br>	
 			Is this dog up to date on it's vaccinations?<br>
 			<input type="radio" name="Vaccinations" value="Yes">Yes<br>
