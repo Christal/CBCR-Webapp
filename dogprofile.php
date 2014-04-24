@@ -1,10 +1,8 @@
-<?php
-	session_start();
-	
-	$host="localhost";
-	$username="root";
-	$password="cs4912";
-	$database="cs4912";
+<?php session_start();
+	$host="db150b.pair.com";
+	$username="cbcr";
+	$password="RmgXUCLD";
+	$database="cbcr_doglist";
 
 	mysql_connect($host,$username,$password);
 	@mysql_select_db($database) or die( "Unable to select database");
@@ -46,7 +44,7 @@
 			<li><a href="adoption.php">Adopt Me</a></li>
 			<li><a href="about.html">About Us</a></li>
 			<li><a href="courtesy.php">Courtesy</a></li>
-			<li><a href="adopted.php">Adopted</a></li>
+			<li><a href="adopted.html">Adopted</a></li>
 			<li><a href="support.html">How to Help</a></li>
 			<li><a href="contacts.html">Contacts</a></li>
 			<li><a href="resources.html">Resources</a></li>
@@ -56,10 +54,8 @@
 	<div id="container">
 		
 		<div class ='cols1'>
-			<h4><?php echo $dog['name'];?></h4>
-			</br>
+			<h4><?php echo $dog['name'];?></h4></br>
 			<img src="<?php echo $URL; ?>"/><br>
-			
 			<h3>Age</h3> <?php echo $dog['age'];?>
 			<h3>Sex</h3> <?php echo $dog['sex'];?>
 			<h3>Location</h3> <?php echo $dog['location'];?>
@@ -69,21 +65,22 @@
 			<h3>Activity Level</h3> <?php echo $dog['activity_level'];?>
 			<h3>Description</h3> <?php echo $dog['description'];?>
 			<h3>Video Link</h3> <?php echo $dog['video'];?><br>
-
 			<br></br>
-			<h3>Status</h3> <?php echo $dog['status'];?>
-			<br>
+			<h3>Status</h3> <?php echo $dog['status'];?><br>
 			<h3>House Trained</h3> <?php echo $dog['house_trained'];?>
 			<h3>Spayed/Neutered</h3> <?php echo $dog['spayed_neutered'];?>
 			<h3>Current of Vaccinations</h3> <?php echo $dog['current_vaccinations'];?>
-			<h3>Home Preferences</h3> <?php echo $dog['home_preference'];?>
-			<br/>
+			<h3>Home Preferences</h3> <?php echo $dog['home_preference'];?><br/>
 			<h3>Contact</h3> <?php echo $dogPosterName. ' (' .$email . ')';?>
 			<br></br>
-			<form action='adoptionform.php' method='post'>
-				
-				<input type="submit" value="Apply to Adopt Me"/></td>
+			<form name = "input" action = "adoption.php" method = "post">
+				<input type="submit" value="Back" name="backtohome"/>
 			</form>
+			
+			<form action='adoptionform.php' method='post'>
+				<input type="submit" value="Apply to Adopt Me"/></td>
+			</form>			
+			
 			</div>	
 			
 			<!--<form name = "input" action = "home.php" method = "post">

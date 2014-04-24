@@ -1,9 +1,8 @@
-<?php
-ob_start();
-$host="localhost";
-$username="root";
-$password="cs4912";
-$database="cs4912";
+<?php ob_start();
+	$host="db150b.pair.com";
+	$username="cbcr";
+	$password="RmgXUCLD";
+	$database="cbcr_doglist";
 
 $tbl_name="dogs";
 

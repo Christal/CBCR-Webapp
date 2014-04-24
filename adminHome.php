@@ -1,11 +1,8 @@
-
-	<?php
-		session_start();
-		
-		$host="localhost";
-		$username="root";
-		$password="cs4912";
-		$database="cs4912";
+<?php session_start();
+	$host="db150b.pair.com";
+	$username="cbcr";
+	$password="RmgXUCLD";
+	$database="cbcr_doglist";
 
 		mysql_connect($host,$username,$password);
 		@mysql_select_db($database) or die( "Unable to select database");
@@ -38,7 +35,7 @@
 			<li><a href="adoption.php">Adopt Me</a></li>
 			<li><a href="about.html">About Us</a></li>
 			<li><a href="courtesy.php">Courtesy</a></li>
-			<li><a href="adopted.php">Adopted</a></li>
+			<li><a href="adopted.html">Adopted</a></li>
 			<li><a href="support.html">How to Help</a></li>
 			<li><a href="contacts.html">Contacts</a></li>
 			<li><a href="resources.html">Resources</a></li>
@@ -66,7 +63,7 @@
 					$result = mysql_query($sql);
 					while ($rows = mysql_fetch_array($result)) {
 				?>
-				<form action='approveDog2.php' method='post'>
+				<form action='dogs.php' method='post'>
 					<div class = 'cols2'>
 						<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
 							<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
@@ -76,7 +73,7 @@
 							</br>
 						<h3>Contact: </h3><p><?php echo $rows['email']; ?>
 							<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
-						<input type="submit" value="Review Dog"/>	
+						<input type="submit" value="Adopt Me!"/>	
 					</div>
 					<center>
 						<div id="nameimage">

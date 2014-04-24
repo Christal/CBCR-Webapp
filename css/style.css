@@ -76,6 +76,27 @@ h4{
 	color: #000000;
 	font-size: 150%;
 }
+.layer1 {
+margin: 0;
+padding: 0;
+}
+
+.content{
+padding: 5px 10px;
+background-color:#fafafa;
+}
+
+p { padding: 5px 0; }
+
+.heading {
+color: #ffffff;
+padding: 10px 10px;
+cursor: pointer;
+position: relative;
+background-color:#2e3f71;
+font-family: "Amatic SC";
+font-size: 150%;
+}
 .cols2 {
 	-moz-column-count:2; /* Firefox */
 	-webkit-column-count:2;
