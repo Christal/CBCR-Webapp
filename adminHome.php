@@ -66,7 +66,7 @@
 					$result = mysql_query($sql);
 					while ($rows = mysql_fetch_array($result)) {
 				?>
-				<form action='dogs.php' method='post'>
+				<form action='approveDog2.php' method='post'>
 					<div class = 'cols2'>
 						<img src="<?php echo $rows['URL']; ?>" alt="Picture of dog"/>
 							<input type="hidden" name="URL" value="<?php echo $rows['URL'];?>">
@@ -76,7 +76,7 @@
 							</br>
 						<h3>Contact: </h3><p><?php echo $rows['email']; ?>
 							<input type="hidden" name="email" value="<?php echo $rows['email'];?>"></p>
-						<input type="submit" value="Adopt Me!"/>	
+						<input type="submit" value="Review Dog"/>	
 					</div>
 					<center>
 						<div id="nameimage">
